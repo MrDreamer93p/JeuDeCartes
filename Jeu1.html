@@ -1,0 +1,85 @@
+<html>
+
+<!Entête>
+<head>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href="Jeu1.css">
+	<link rel="stylesheet" href="header2.css">
+<title>Jeu des Paires</title>
+</head>
+
+<!CorpsDeLaPage>
+<body>
+    <header>
+      <nav>
+        <ul>
+		  <li><a href="index.html"><u>Acceuil</u></a></li>
+        </ul>
+      </nav>
+    </header>
+<script type="text/javascript" src="jeu1.js"></script>
+    <TABLE border=0 width=70% align=center cellspacing="2" cellpadding="2" >
+
+      <TR>
+      	<TD colspan=2>
+      		<div id="DivDebug" style="display:none;" >
+      	   <table width=100% align=center cellspacing="0" cellpadding="0" border=0 >
+             <TR>
+             	 <TD> Nbr Gagner :       </TD><TD  align=left id="NbrGagner" width=5% >&nbsp;&nbsp;</td>
+               <TD> Valeurs Aléatoire: </TD><TD  align=left id="MSG">&nbsp;&nbsp;</td>
+             </TR>
+             <TR>
+               <TD> Tentatives : </TD><TD align=left id="Try">&nbsp;&nbsp;</td>
+               <TD> Paires Ok  : </TD><TD align=left id="paires">&nbsp;&nbsp;</td>
+             </TR>
+           </table>
+          </div>
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+        	<label for="tempo">Vitesse des cartes</label>
+        	<select id="tempo" onchange="Tempor = this[this.selectedIndex].value;">
+        		<option value=500 selected>Normale</option>
+        		<option value=200>Impossible</option>
+        	</select>
+        </TD>
+        <TD>
+           <input id="Rejouer" type="button" value="Rejouer" onclick="InitCarte();" disabled>
+        </TD>        
+        </TR>
+    </TABLE>
+    <br>
+   <TABLE border=0  align=center cellspacing="1" cellpadding="1" >
+
+     <TBODY id=TabCarte>
+      <tr>
+       <td id="0" onclick="Jouer(this)" class=Back>&nbsp;</td>
+       <td id="1" onclick="Jouer(this)" class=Back>&nbsp;</td>
+       <td id="2" onclick="Jouer(this)" class=Back>&nbsp;</td>
+       <td id="3" onclick="Jouer(this)" class=Back>&nbsp;</td>
+      </tr>
+      <tr>
+       <td id="4" onclick="Jouer(this)" class=Back>&nbsp;</td>
+       <td id="5" onclick="Jouer(this)" class=Back>&nbsp;</td>
+       <td id="6" onclick="Jouer(this)" class=Back>&nbsp;</td>
+       <td id="7" onclick="Jouer(this)" class=Back>&nbsp;</td>
+      </tr>
+    </TBODY>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<TD>
+<input id="Rejouer" type="button" value="Full Reset" onclick="InitCarte();">
+</TD>
+</TABLE>
+<script type="text/javascript" src="java1.js"></script>
+
+</body>
+</html>
